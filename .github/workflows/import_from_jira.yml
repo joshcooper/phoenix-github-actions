@@ -23,7 +23,6 @@ on:
 
 jobs:
   import:
-    if: ${{ github.repository_owner == 'puppetlabs' }}
     runs-on: ubuntu-latest
     name: Import from JIRA
     steps:
@@ -35,7 +34,7 @@ jobs:
         # but not files in `.github` or `.github/actions`.
       - name: Get action script
         run: |
-          gh api "${{ github.api_url }}/repos/puppetlabs/phoenix-github-actions/contents/.github/actions/import_from_jira.rb" -H "Accept: application/vnd.github.raw" > import_from_jira.rb
+          gh api "${{ github.api_url }}/repos/joshcooper/phoenix-github-actions/contents/.github/actions/import_from_jira.rb?ref=demo" -H "Accept: application/vnd.github.raw" > import_from_jira.rb
         env:
           GH_TOKEN: ${{ github.token }}
 
