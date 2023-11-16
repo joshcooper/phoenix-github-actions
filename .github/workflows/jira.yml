@@ -28,7 +28,7 @@ name: Export to JIRA
 
 jobs:
   export:
-    if: ${{ github.repository_owner == 'puppetlabs' && github.event.label.name == 'triaged' }}
+    if: ${{ github.repository_owner == 'joshcooper' && github.event.label.name == 'triaged' }}
     runs-on: ubuntu-latest
     name: Export to JIRA
     steps:
