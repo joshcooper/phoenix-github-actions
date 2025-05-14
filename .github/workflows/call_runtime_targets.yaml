@@ -1,0 +1,10 @@
+name: Calling Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-reusable-workflow:
+    uses: puppetlabs/phoenix-github-actions/.github/workflows/runtime_targets.yaml@runtime-targets
+    with:
+      project: "agent-runtime-main"
